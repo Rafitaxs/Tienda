@@ -12,7 +12,7 @@ public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idProducto;
-    private Long idCategoria;
+    //private Long idCategoria;
     private String descripcion;
     private String detalle;
     private double precio;
@@ -21,5 +21,7 @@ public class Producto {
     private boolean activo;
     
     
-    
+    @ManyToOne
+    @JoinColumn(name="id_categoria")
+    private Categoria categoria;
 }

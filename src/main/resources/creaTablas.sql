@@ -2,7 +2,7 @@
 drop schema if exists techshop;
 drop user if exists usuario_prueba;
 drop user if exists usuario_reportes;
-CREATE SCHEMA techshop ;
+CREATE SCHEMA techshop;
 
 /*Se crea un usuario para la base de datos llamado "usuario_prueba" y tiene la contraseña "Usuario_Clave."*/
 create user 'usuario_prueba'@'%' identified by 'Usuar1o_Clave.';
