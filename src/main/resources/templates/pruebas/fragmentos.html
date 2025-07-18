@@ -81,12 +81,12 @@
                                     [[#{pruebas.ampliadas}]]
                                 </button>
                             </div>
-                            
+
                         </div>
                     </div>
                 </form>
-                
-                                <!-- Consultas de query2 -->
+
+                <!-- Consultas de query2 -->
                 <form th:action="@{/pruebas/query2}"
                       method="post">
                     <div class="card p-2">
@@ -114,12 +114,12 @@
                                     [[#{pruebas.jpql}]]
                                 </button>
                             </div>
-                            
+
                         </div>
                     </div>
                 </form>
-                
-                
+
+
                 <!-- Consultas de query3-->
                 <form th:action="@{/pruebas/query3}"
                       method="post">
@@ -148,7 +148,68 @@
                                     [[#{pruebas.nativo}]]
                                 </button>
                             </div>
-                            
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Consultas de la Práctica #4 -->
+                
+                
+                <!-- Consultas por Nombre de Producto de la Práctica #4-->
+                <form th:action="@{/pruebas/practica42}"
+                      method="post">
+                    <div class="card p-2">
+                        <div class="card-header text-center bg-secondary text-white">
+                            <h5>[[#{pruebas.consultaDescripcion}]]</h5>
+                        </div>
+                        <div class="card body">
+                            <div class="mb-3">
+                                <label>[[#{pruebas.productoDescripcion}]]</label>
+                                <input type="text" name="descripcion"
+                                       class="form-control"
+                                       th:value="${descripcion}" required="true"/>
+                            </div>
+
+                            <div class="card-footer text-center text-white">
+                                <button type="submit"
+                                        class="btn btn-primary">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    [[#{pruebas.consulta1}]]
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+
+                <!-- Consultas por Existencias de la Práctica #4 -->
+                <form th:action="@{/pruebas/practica41}"
+                      method="post">
+                    <div class="card p-2">
+                        <div class="card-header text-center bg-secondary text-white">
+                            <h5>[[#{pruebas.consulta}]]</h5>
+                        </div>
+                        <div class="card body">
+                            <div class="mb-3">
+                                <label>[[#{pruebas.existencias.inferior}]]</label>
+                                <input type="number" name="existenciasInf"
+                                       min="0" class="form-control"
+                                       th:value="${existenciasInf}" required="true"/>
+                            </div>
+                            <div class="mb-3">
+                                <label>[[#{pruebas.existencias.superior}]]</label>
+                                <input type="number" name="existenciasSup"
+                                       min="0" class="form-control"
+                                       th:value="${existenciasSup}" required="true"/>
+                            </div>
+
+                            <div class="card-footer text-center text-white">
+                                <button type="submit"
+                                        class="btn btn-primary">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    [[#{pruebas.consulta1}]]
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </form>

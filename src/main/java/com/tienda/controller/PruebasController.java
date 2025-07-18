@@ -65,9 +65,8 @@ public class PruebasController {
         model.addAttribute("precioInf", precioInf);
         model.addAttribute("precioSup", precioSup);
         return "/pruebas/listado2";
-
     }
-    
+
     @PostMapping("/query2")
     public String query2(@RequestParam() double precioInf,
             @RequestParam() double precioSup,
@@ -80,7 +79,7 @@ public class PruebasController {
         return "/pruebas/listado2";
 
     }
-    
+
     @PostMapping("/query3")
     public String query3(@RequestParam() double precioInf,
             @RequestParam() double precioSup,
@@ -93,5 +92,27 @@ public class PruebasController {
         return "/pruebas/listado2";
 
     }
+    //Consulta 1 de la Práctica #4
+    @PostMapping("/practica41")
+    public String practica4(@RequestParam() int existenciasInf,
+            @RequestParam() int existenciasSup,
+            Model model) {
 
+        var lista = productoService.consultaAmpliadaExistencias(existenciasInf, existenciasSup);
+        model.addAttribute("productos", lista);
+        model.addAttribute("existenciasInf", existenciasInf);
+        model.addAttribute("existenciasSup", existenciasSup);
+        return "/pruebas/listado2";
+    }
+    
+    //Consulta 2 de la Práctica #4
+    @PostMapping("/practica42")
+    public String practica42(@RequestParam() String descripcion,
+            Model model) {
+
+        var lista = productoService.consultaAmpliadaDescripcion(descripcion);
+        model.addAttribute("productos", lista);
+        model.addAttribute("descripcion", descripcion);
+        return "/pruebas/listado2";
+    }
 }
