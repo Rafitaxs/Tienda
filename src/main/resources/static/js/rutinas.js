@@ -23,7 +23,7 @@ function cargarImagen(input) {
     }
 }
 
-//Para insertar información en el modal según el registro...
+////Para insertar información en el modal según el registro...
 //document.addEventListener('DOMContentLoaded', function () {
 //    const confirmModal = document.getElementById('confirmModal');
 //    confirmModal.addEventListener('show.bs.modal', function (event) {
